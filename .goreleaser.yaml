@@ -1,0 +1,20 @@
+version: 2
+
+builds:
+  - binary: iptablesf
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    goamd64:
+      - v1
+    ignore:
+      - goos: darwin
+        goarch: amd64
+      - goos: linux
+        goarch: arm64
+
+archives:
+  - formats: binary
